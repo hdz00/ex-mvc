@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewData["Title"] - Site</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                Site
+            </a>
+
+            <div class="navbar-nav">
+
+                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                    Home
+                </a>
+
+                <a class="nav-link" asp-controller="Home" asp-action="Sobre">
+                    Sobre
+                </a>
+
+                <a class="nav-link" asp-controller="Home" asp-action="Servicos">
+                    Serviços
+                </a>
+
+                <a class="nav-link" asp-controller="Home" asp-action="Registro">
+                    Registro
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+    <footer class="text-center mt-5 p-3">
+
+        <p>&copy; 2026 - Site</p>
+
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
