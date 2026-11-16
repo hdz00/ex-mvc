@@ -94,4 +94,5 @@ C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\teste.p
 C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\teste.genruntimeconfig.cache
 C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\ref\teste.dll
 C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\compressed\wkn3lo7afl-{0}-jmkqtk3he8-jmkqtk3he8.gz
-C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\compressed\q5wpe3719o-{0}-s268y1fcps-s268y1fcps.gz
+C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\teste.sourcelink.json
+C:\Users\pedro\Documents\codigos\front\teste-mvc\teste\obj\Debug\net10.0\compressed\q5wpe3719o-{0}-uxtpo0v1ne-uxtpo0v1ne.gz
