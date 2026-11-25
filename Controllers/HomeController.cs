@@ -5,15 +5,15 @@ namespace teste.Controllers
 {
     public class HomeController:Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string? termo)
         {
             List<Servico> servicos=new List<Servico>
             {
                 new Servico
                 {
-                    Nome="xxx",
-                    Descricao="Lorem ipsum dolor sit amet consectetur adipiscing elit.",
-                    Preco=500
+                    Nome = "xxx",
+                    Descricao = "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+                    Preco = 500
                 },
 
                 new Servico
@@ -45,6 +45,23 @@ namespace teste.Controllers
                 }
             };
 
+            List<Servico> servicosFiltrados=new List<Servico>();
+
+            if (!string.IsNullOrWhiteSpace(termo))
+            {
+                foreach (var servico in servicos)
+                {
+                    if (servico.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase)||servico.Descricao.Contains(termo, StringComparison.OrdinalIgnoreCase))
+                    {
+                        servicosFiltrados.Add(servico);
+                    }
+                }
+            }
+            else
+            {
+                servicosFiltrados=servicos;
+            }
+
             Promocao promocao=new Promocao
             {
                 Nome="hhh",
@@ -54,8 +71,9 @@ namespace teste.Controllers
 
             HomeViewModel dados=new HomeViewModel
             {
-                Servicos=servicos,
-                Promocao=promocao
+                Servicos=servicosFiltrados,
+                Promocao=promocao,
+                Termo=termo??""
             };
 
             return View(dados);

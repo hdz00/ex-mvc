@@ -5,5 +5,7 @@ namespace teste.Models
         public List<Servico> Servicos {get; set;}
 
         public Promocao Promocao {get; set;}
+
+        public string Termo {get; set;}="";
     }
 }
